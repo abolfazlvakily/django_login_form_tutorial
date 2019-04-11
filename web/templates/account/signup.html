@@ -1,0 +1,10 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<h1>signup</h1>
+<form method="post" action="{% url 'web:signup' %}">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" value="signup">
+</form>
+{% endblock %}
